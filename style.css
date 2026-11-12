@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: #f4f4f4;
+}
+
+header{ 
+  color: #f4f4f4;
+  background-color: #003777;
+  text-align: center; 
+  padding: 20px; 
+  font-size: small;
+}
+
+nav{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #c5c5c5;
+}
+
+nav a{
+    color:#003777;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+nav a:hover{
+    color: #4b8f54;
+}
+
+main{
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ffffff;
+    padding: 20px;
+    min-width: 0;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #48744b;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.card img{
+    width: 50%;
+    height: 100px;
+    object-fit: cover;
+}
+
+section{
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius:  10px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+h2{
+    font: inherit;
+    background-color: #003777;
+    text-align: left;
+    color: #f4f4f4;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: #003777;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+
+/* -------- RESPONSIVIDADE -------- */
+
+/*Abaixo dos 900px*/
+@media(max-width: 900px){
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*abaixo de 440px*/
+/*está para resolução do iPhone 16 Pro Max para testes*/
+@media(max-width: 440px){
+    nav a{
+        grid-template-columns: 1fr, 1fr, 1fr;
+        border-bottom: 2px solid #c5c5c5;
+        color:#003777;
+        text-decoration: none;
+        font-weight: bold;
+    }  
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
