@@ -28,10 +28,12 @@ nav{
 }
 
 nav a{
+    grid-template-columns: 0;
     color:#003777;
     text-decoration: none;
+    display: center;
     font-weight: bold;
-    margin: 0 15px;
+    margin: 0 5px;
 }
 
 nav a:hover{
@@ -61,14 +63,14 @@ main{
 }
 
 .card img{
-    width: 50%;
-    height: 100px;
+    width: auto;
+    height: 200px;
     object-fit: cover;
 }
 
 section{
-    background-color: #ffffff;
-    padding: 20px;
+    background-color: #f4f4f4;
+    padding: 5px;
     margin-bottom: 20px;
     border-radius:  10px;
 }
@@ -86,6 +88,7 @@ h2{
     color: #f4f4f4;
     padding: 10px;
     border-radius: 10px;
+    margin: 15px 0;
 }
 
 footer{
@@ -110,14 +113,61 @@ footer{
 /*abaixo de 440px*/
 /*está para resolução do iPhone 16 Pro Max para testes*/
 @media(max-width: 440px){
+    nav{
+        border: 0;
+        background-color: #ffffff;
+        border-radius: 0 0 0 10px;
+    }
+
     nav a{
-        grid-template-columns: 1fr, 1fr, 1fr;
+        grid-template-columns: 3fr;
         border-bottom: 2px solid #c5c5c5;
+        padding-bottom: 0 7px;
         color:#003777;
-        text-decoration: none;
-        font-weight: bold;
+        margin: 0 15px;
     }  
+
+    .card img{
+        /* align-items: left; */
+        width: auto;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .card {
+        padding: 20px;
+        min-width: 0;
+        text-align: center; 
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    li{
+        list-style:  none;
+    }
+    
+
+    /*.card article{
+        /* flex-direction: row-reverse; 
+        /* align-items: left; 
+        gap: 20px;
+    }*/
+
+    /* .card h3, .card p, .card ul, .card img{ */
+        /* flex: 1; */
+    /* } */
+
+    /*.texto {
+        display: flex;
+        flex-direction: row-reverse;
+        /* text-align: right; 
+    }*/
+
     .grid{
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
