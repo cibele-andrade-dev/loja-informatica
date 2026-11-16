@@ -19,28 +19,28 @@
 
         <main>
             <section id="apresentacao">
-                <p>Escolha os componentes do seu computador</p>
+                <h2>Apresentação</h2>
+                <p class="paragrafo-destaque">Na nossa loja, você tem a liberdade de criar o computador ideal para suas necessidades! Explore uma variedade de componentes tecnológicos, escolha cada peça e monte uma configuração personalizada de acordo com seu estilo, desempenho desejado e orçamento.</p>
             </section>
 
             <section id="componentes">
                 <h2>Componentes</h2>
-                <div class="grid texto" >
+                <div class="grid" >
                     <article class="card"> <!-- CPU -->
                         <img
                         src="imagens/cpu-icon-flat-simbolo-de-um-processador-em-um-fundo-branco-vetor.jpg"
                         alt="Ícone de um CPU simbolo de um processador em um fundo branco"
-                        width="20%"
-                        height="20%"
                         />
                         <div>
                         <h3>Processador</h3>
-                        <p>Executa as tarefas</p>
-                        
+                        <p>Responsável por executar instruções e processsar as tarefas do computador.</p>
+
                         <ul>
-                            <li>teste</li>
-                            <li>teste</li>
+                            <li>Velocidade: 3.5 GHz.</li>
+                            <li>Núcleos: 6 núcleos.</li>
                         </ul>
                         </div>
+                    
                     </article>
                     
 
@@ -48,15 +48,13 @@
                         <img
                         src="imagens/ram-memoria-computador-portmemoria-ram-icone-elemento-em-isolado-branco-fundo-vetor.jpg"
                         alt="Ícone de uma memória RAM de computador em um fundo branco"
-                        width="20%"
-                        height="20%"
                         />
                         <div>
                         <h3>Memória RAM</h3>
-                        <p>Apoia os programas</p>
+                        <p>Armazena temporariamente os dados dos programas em execução.</p>
                         <ul>
-                            <li></li>
-                            <li></li>
+                            <li>Capacidade: 16GB.</li>
+                            <li>Frequência: 3200MHz.</li>
                         </ul>
                         </div>
                     </article>
@@ -65,15 +63,13 @@
                         <img
                         src="imagens/icone-de-ssd-de-vetor-simples.avif"
                         alt="Ícone de um SSD de computador em um fundo branco"
-                        width="20%"
-                        height="20%"
                         />
                         <div>
                         <h3>SSD</h3>
-                        <p>Armazena os arquivos</p>
+                        <p>Armazena permanentemente arquivos, programas e o sistema operacional.</p>
                         <ul>
-                            <li></li>
-                            <li></li>
+                            <li>Capacidade: 1TB.</li>
+                            <li>Leitura: até 3.500MB/s</li>
                         </ul>
                     </div>
                     </article>
@@ -81,9 +77,63 @@
             </section>
 
             <section id="personalizacao">
-                <h2>Personalização</2>
+                <h2>Personalização</h2>
+                <form class="form-grid">
+                <div class="campo">
+                    <label><h3>Nome do computador</h3></label>
+                    <input style="width: 100%" type="text" id="nome" name="nome" placeholder="Ex: NitroTech Xtreme" >
+                    <label><h3>Processador</h3></label>
+                    <select>
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">Intel Core i3-12100F</option>
+                        <option value="2">Intel Core i5-13400F</option>
+                        <option value="3">AMD Ryzen 5 5600X</option>
+                        <option value="4">AMD Ryzen 7 5800X</option>
+                    </select>
+                </div>
 
+                <div>
+                    <fieldset class="campo">
+                        <h3>Finalidade principal</h3>
+                        <label>
+                            <input type="radio" name="finalidade" value="estudo" required>
+                            Estudo
+                        </label>
+                        <label>
+                            <input type="radio" name="finalidade" value="trabalho" >
+                            Trabalho
+                        </label>
+                        <label>
+                            <input type="radio" name="finalidade" value="jogos">
+                            Jogos
+                        </label>
+
+                    </fieldset>
+                    <fieldset class="campo">
+                        <h3>Acessórios (opcionais)</h3>
+                        <label>
+                            <input type="checkbox" name="acessorio" value="webcam">
+                            Webcam
+                        </label>
+                        <label>
+                            <input type="checkbox" name="acessorio" value="headset">
+                            Headset
+                        </label>
+                        <label>
+                            <input type="checkbox" name="acessorio" value="mousepad">
+                            Mousepad
+                        </label>
+                    </fieldset>
+                </div>
+                </form>
+
+                <form class="campo">
+                    <label><h3>Como pretende utilizar o computador?</h3></label>
+                    <textarea></textarea>
+                </form>
             </section>
+
+            
 
         </main>
 

@@ -3,7 +3,12 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: 5px solid #4b8f54;
+    outline-offset: 2px;
 }
 
 body{
@@ -64,8 +69,17 @@ main{
 
 .card img{
     width: auto;
-    height: 200px;
+    height: 100px;
     object-fit: cover;
+}
+
+.card ul{
+    padding-top: 7px;
+    padding-left: 23px;
+}
+
+.card p{
+    padding-top: 7px;
 }
 
 section{
@@ -81,6 +95,22 @@ section{
   gap: 20px;
 }
 
+.form-grid{
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.paragrafo-destaque{
+    color: #003777;
+    font-weight: bold;
+    background-color: #d5e9ff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #48744b;
+}
+
 h2{
     font: inherit;
     background-color: #003777;
@@ -89,6 +119,18 @@ h2{
     padding: 10px;
     border-radius: 10px;
     margin: 15px 0;
+}
+
+.campo {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #003777;
+    border-radius: 10px;
+}
+
+.campo select,
+.campo textarea{
+    width: 100%;
 }
 
 footer{
@@ -113,6 +155,9 @@ footer{
 /*abaixo de 440px*/
 /*está para resolução do iPhone 16 Pro Max para testes*/
 @media(max-width: 440px){
+    body{
+        font-size: 16px;
+    }
     nav{
         border: 0;
         background-color: #ffffff;
@@ -122,52 +167,29 @@ footer{
     nav a{
         grid-template-columns: 3fr;
         border-bottom: 2px solid #c5c5c5;
-        padding-bottom: 0 7px;
+        padding-bottom: 7px;
         color:#003777;
         margin: 0 15px;
     }  
 
-    .card img{
-        /* align-items: left; */
-        width: auto;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-
     .card {
         padding: 20px;
         min-width: 0;
-        text-align: center; 
         border-radius: 10px;
         display: flex;
         align-items: center;
     }
 
-    li{
-        list-style:  none;
+    .card div{
+        flex: 1;
+        min-width: 0;
     }
-    
-
-    /*.card article{
-        /* flex-direction: row-reverse; 
-        /* align-items: left; 
-        gap: 20px;
-    }*/
-
-    /* .card h3, .card p, .card ul, .card img{ */
-        /* flex: 1; */
-    /* } */
-
-    /*.texto {
-        display: flex;
-        flex-direction: row-reverse;
-        /* text-align: right; 
-    }*/
 
     .grid{
-        display: grid;
         grid-template-columns: 1fr;
-        gap: 20px;
     }
+
+    .form-grid{
+        grid-template-columns: 1fr;
+}
 }
