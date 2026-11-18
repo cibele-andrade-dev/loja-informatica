@@ -11,7 +11,7 @@
             <h1>MONTE SEU COMPUTADOR</h1>
         </header>
 
-        <nav class="grid">
+        <nav class="grid-nav">
             <a href="#apresentacao">Apresentação</a>
             <a href="#componentes">Componentes</a>
             <a href="#personalizacao">Personalização</a>
@@ -78,12 +78,14 @@
 
             <section id="personalizacao">
                 <h2>Personalização</h2>
-                <form class="form-grid">
+                
+                <form>
+                <div class="form-grid">
                 <div class="campo">
                     <label><h3>Nome do computador</h3></label>
-                    <input style="width: 100%" type="text" id="nome" name="nome" placeholder="Ex: NitroTech Xtreme" >
-                    <label><h3>Processador</h3></label>
-                    <select>
+                    <input class="nome-computador" type="text" id="nome-computador" name="nome-computador" placeholder="Ex: NitroTech Xtreme" >
+                    <label for="processador"><h3>Processador</h3></label>
+                    <select id="processador" name="processador" required>
                         <option value="">Selecione uma opção</option>
                         <option value="1">Intel Core i3-12100F</option>
                         <option value="2">Intel Core i5-13400F</option>
@@ -91,10 +93,10 @@
                         <option value="4">AMD Ryzen 7 5800X</option>
                     </select>
                 </div>
-
+                
                 <div>
                     <fieldset class="campo">
-                        <h3>Finalidade principal</h3>
+                        <h3>Finalidade principal:</h3>
                         <label>
                             <input type="radio" name="finalidade" value="estudo" required>
                             Estudo
@@ -110,7 +112,7 @@
 
                     </fieldset>
                     <fieldset class="campo">
-                        <h3>Acessórios (opcionais)</h3>
+                        <h3>Acessórios (opcionais):</h3>
                         <label>
                             <input type="checkbox" name="acessorio" value="webcam">
                             Webcam
@@ -125,15 +127,19 @@
                         </label>
                     </fieldset>
                 </div>
-                </form>
+                </div>
 
-                <form class="campo">
-                    <label><h3>Como pretende utilizar o computador?</h3></label>
-                    <textarea></textarea>
+                <div class="campo">
+                    <label for="utilizacao"><h3>Como pretende utilizar o computador?</h3></label>
+                    <textarea id="utilizacao" name="utilizacao" placeholder="Digite sua resposta aqui" rows="5" minlength="10" maxlength="500"></textarea>
+                </div>
+
+                <div class="acao-formulario acao">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+                </div>
                 </form>
             </section>
-
-            
 
         </main>
 

@@ -7,7 +7,7 @@
 }
 
 *:focus{
-    outline: 5px solid #4b8f54;
+    outline: 3px solid #4b8f54;
     outline-offset: 2px;
 }
 
@@ -27,22 +27,28 @@ header{
 }
 
 nav{
-    padding: 10px;
+    padding-bottom: 12px;
     text-align: center;
     border-bottom: 2px solid #c5c5c5;
+    margin: 12px;
 }
 
 nav a{
-    grid-template-columns: 0;
     color:#003777;
+    padding: 10px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
     text-decoration: none;
-    display: center;
     font-weight: bold;
     margin: 0 5px;
+    border-radius: 10px;
 }
 
 nav a:hover{
-    color: #4b8f54;
+    color: #f4f4f4;
+    background-color: #003777;
+    margin: 0 10px;
 }
 
 main{
@@ -87,6 +93,7 @@ section{
     padding: 5px;
     margin-bottom: 20px;
     border-radius:  10px;
+    font: inherit;                                                                                                 ;
 }
 
 .grid{
@@ -126,11 +133,43 @@ h2{
     margin-bottom: 15px;
     border: 2px solid #003777;
     border-radius: 10px;
+    font: inherit;
 }
 
+.nome-computador,
 .campo select,
 .campo textarea{
     width: 100%;
+    display: block;
+    border: 2px solid #003777;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.campo textarea{
+    resize: none;
+}
+
+.acao-formulario{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.acao-formulario button{
+    display: grid;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 16px;
+    color: #f4f4f4;
+    background-color: #003777;
+    border-radius: 10px;
+}
+
+li{
+    list-style: circle;
+    list-style-position: inside;
+    text-align: center;
 }
 
 footer{
@@ -139,9 +178,6 @@ footer{
     text-align: center;
     padding: 15px;
 }
-
-
-
 
 /* -------- RESPONSIVIDADE -------- */
 
@@ -173,7 +209,8 @@ footer{
     }  
 
     .card {
-        padding: 20px;
+        font-size: 12px;
+        padding: 10px;
         min-width: 0;
         border-radius: 10px;
         display: flex;
@@ -191,5 +228,10 @@ footer{
 
     .form-grid{
         grid-template-columns: 1fr;
-}
+        gap: 0;
+    }
+
+    .grid-nav{
+        display: grid;
+    }
 }
